@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Relay</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      :root {
+        --bg: #0c0c0b;
+        --surface: #161614;
+        --fg: #f3f0e8;
+        --muted: #9a978c;
+        --accent: #7aa89a;
+        --border: rgba(243, 240, 232, 0.12);
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; margin: 0; background: var(--bg); color: var(--fg); font-family: Figtree, ui-sans-serif, system-ui, sans-serif; }
+      #app { min-height: 100%; }
+      button { cursor: pointer; font: inherit; }
+    </style>
+  </head>
+  <body>
+    <div id="app">Relay is loading…</div>
+    <script>
+      /* Fallback shell if the Vite UI is not the process serving this origin.
+         The live preview should hit the React app on the main port; this page
+         exists so FastAPI GET / never returns {"detail":"Not Found"}. */
+      document.getElementById("app").innerHTML = "";
+    </script>
+    <script type="module" src="/static/client.js"></script>
+  </body>
+</html>
